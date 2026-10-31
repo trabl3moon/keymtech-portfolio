@@ -8,6 +8,14 @@ Led by an Automation Anywhere certified developer (Agentic Process Automation + 
 
 > These are project write-ups and self-drawn diagrams. Client and proprietary source code is not published.
 
+## Skills & keywords
+
+- **AI & Agents:** Agentic AI, AI Agents, Multi-Agent Orchestration, LLM Integration, OpenAI GPT, Anthropic Claude, Google Gemini, Tool Calling, MCP (Model Context Protocol), Prompt Engineering, AI Guardrails, Human-in-the-Loop, LLM Cost Optimisation
+- **Automation:** RPA, Automation Anywhere, Blue Prism, Agentic Process Automation, Intelligent Automation, Workflow Automation, No-code Agent Builders
+- **Engineering:** Python, Node.js, TypeScript, Java, C#, FastAPI, Next.js, React, REST APIs, Redis, Go
+- **Quality:** Test Automation, Selenium, Playwright, WebdriverIO, JMeter, API Testing
+- **Edge & Ops:** Raspberry Pi, PiKVM, Tailscale, Linux, systemd
+
 ## AI Incident Command Center
 *Agentic Process Automation*
 
