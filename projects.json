@@ -1,5 +1,60 @@
 [
   {
+    "id": "n8n-csv-to-mysql",
+    "title": "Reusable n8n CSV to MySQL Workflow",
+    "tag": "Workflow Automation (n8n)",
+    "summary": "Upload a CSV through a web form; mapped, validated rows land in MySQL and bad rows come back in a downloadable error log.",
+    "problem": "Teams import CSVs by hand or with brittle scripts. One bad row breaks the whole load, and changing a column means editing code.",
+    "solution": "An n8n workflow: Form Trigger upload, CSV parse, a single Settings node for table and column mapping (no code edits), a validator for required fields, integers, numbers, dates and emails, per-row MySQL inserts that catch database rejections, and a results page that returns error_log.csv. Tested end to end on n8n 2.45 and MySQL 8.4 in Docker.",
+    "outcomes": [
+      "No-code column mapping",
+      "Bad rows skipped and logged, never block the run",
+      "Open-source, one-command Docker test"
+    ],
+    "stack": [
+      "n8n",
+      "MySQL",
+      "JavaScript",
+      "Docker"
+    ],
+    "flow": [
+      "Web form",
+      "Parse CSV",
+      "Map + validate",
+      "MySQL insert",
+      "Error log"
+    ],
+    "repo": "https://github.com/trabl3moon/keymtech-n8n-csv-to-mysql"
+  },
+  {
+    "id": "strategy-backtester",
+    "title": "Config-driven Strategy Backtester",
+    "tag": "Python / Quant Tools",
+    "summary": "Turn trading rules into a TOML file and test them on historical stock or ETF data with realistic fills, costs and a full report.",
+    "problem": "Traders want to test rules before going live, but spreadsheets hide look-ahead bias and ignore costs and slippage.",
+    "solution": "A pandas engine that reads entries, exits, stops, targets and position sizing from one config file. Signals fill at the next bar's open, stops handle gaps, and commission and slippage apply on every fill. It outputs equity curve, drawdown, Sharpe, Sortino, win rate, profit factor, a trade log and a self-contained HTML report. Ten hand-checked tests run in CI on Windows and Linux.",
+    "outcomes": [
+      "No look-ahead fills",
+      "Risk-% and ATR position sizing",
+      "HTML + CSV reports, CI-tested"
+    ],
+    "stack": [
+      "Python",
+      "pandas",
+      "NumPy",
+      "pytest",
+      "GitHub Actions"
+    ],
+    "flow": [
+      "OHLCV CSV",
+      "Indicators",
+      "Rules (TOML)",
+      "Fill engine",
+      "Metrics + report"
+    ],
+    "repo": "https://github.com/trabl3moon/keymtech-strategy-backtester"
+  },
+  {
     "id": "apa-incident-command-center",
     "title": "AI Incident Command Center",
     "tag": "Agentic Process Automation",

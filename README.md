@@ -6,7 +6,7 @@ Led by an Automation Anywhere certified developer (Agentic Process Automation + 
 **Live site:** https://trabl3moon.github.io/keymtech-portfolio/  
 **Hire us:** https://www.freelancer.com/u/rahulid6
 
-> These are project write-ups and self-drawn diagrams. Client and proprietary source code is not published.
+> Project write-ups and self-drawn diagrams. Open-source demos link to their code; client and proprietary source code is not published.
 
 ## Skills & keywords
 
@@ -15,6 +15,40 @@ Led by an Automation Anywhere certified developer (Agentic Process Automation + 
 - **Engineering:** Python, Node.js, TypeScript, Java, C#, FastAPI, Next.js, React, REST APIs, Redis, Go
 - **Quality:** Test Automation, Selenium, Playwright, WebdriverIO, JMeter, API Testing
 - **Edge & Ops:** Raspberry Pi, PiKVM, Tailscale, Linux, systemd
+
+## Reusable n8n CSV to MySQL Workflow
+*Workflow Automation (n8n)*
+
+![Reusable n8n CSV to MySQL Workflow](images/n8n-csv-to-mysql.png)
+
+**Problem:** Teams import CSVs by hand or with brittle scripts. One bad row breaks the whole load, and changing a column means editing code.
+
+**What we built:** An n8n workflow: Form Trigger upload, CSV parse, a single Settings node for table and column mapping (no code edits), a validator for required fields, integers, numbers, dates and emails, per-row MySQL inserts that catch database rejections, and a results page that returns error_log.csv. Tested end to end on n8n 2.45 and MySQL 8.4 in Docker.
+
+- No-code column mapping
+- Bad rows skipped and logged, never block the run
+- Open-source, one-command Docker test
+
+**Stack:** n8n, MySQL, JavaScript, Docker
+
+**Code:** https://github.com/trabl3moon/keymtech-n8n-csv-to-mysql
+
+## Config-driven Strategy Backtester
+*Python / Quant Tools*
+
+![Config-driven Strategy Backtester](images/strategy-backtester.png)
+
+**Problem:** Traders want to test rules before going live, but spreadsheets hide look-ahead bias and ignore costs and slippage.
+
+**What we built:** A pandas engine that reads entries, exits, stops, targets and position sizing from one config file. Signals fill at the next bar's open, stops handle gaps, and commission and slippage apply on every fill. It outputs equity curve, drawdown, Sharpe, Sortino, win rate, profit factor, a trade log and a self-contained HTML report. Ten hand-checked tests run in CI on Windows and Linux.
+
+- No look-ahead fills
+- Risk-% and ATR position sizing
+- HTML + CSV reports, CI-tested
+
+**Stack:** Python, pandas, NumPy, pytest, GitHub Actions
+
+**Code:** https://github.com/trabl3moon/keymtech-strategy-backtester
 
 ## AI Incident Command Center
 *Agentic Process Automation*
