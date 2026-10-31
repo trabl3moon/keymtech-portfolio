@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Key M Tech Portfolio</title>
+<meta name="description" content="Key M Tech Pvt Ltd: RPA, AI agents, LLM apps, test automation and Raspberry Pi / PiKVM remote ops.">
+<style>
+:root{--bg:#f6f7fb;--fg:#141a2b;--muted:#566079;--card:#fff;--line:#e3e7f0;--accent:#2563eb}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1020;--fg:#e8ecf5;--muted:#9aa6c2;--card:#121a33;--line:#24304f;--accent:#60a5fa}}
+*{box-sizing:border-box}body{margin:0;font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.55}
+header{max-width:1100px;margin:0 auto;padding:56px 16px 24px}h1{font-size:clamp(28px,5vw,44px);margin:0 0 8px}
+.lead{color:var(--muted);font-size:18px;max-width:780px}
+.svc{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.svc span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px}
+main{max-width:1100px;margin:0 auto;padding:8px 16px 64px;display:grid;gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.card img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover}.body{padding:20px 24px 24px}
+.tag{color:var(--accent);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+h2{margin:4px 0 12px;font-size:24px}ul{padding-left:20px}
+.chip{display:inline-block;margin:4px 6px 0 0;padding:4px 10px;border-radius:6px;background:var(--bg);border:1px solid var(--line);font-size:13px}
+footer{text-align:center;color:var(--muted);padding:24px 16px 48px;font-size:14px}
+</style></head><body>
+<header><h1>Key M Tech Pvt Ltd</h1>
+<p class="lead">Automation that works in production: RPA bots, AI agents and LLM apps, test automation, and remote-managed Raspberry Pi hardware. Led by an Automation Anywhere certified developer (Agentic Process Automation + Essential Developer) with 13+ years of enterprise delivery for airline, banking, retail and government clients.</p>
+<div class="svc"><span>RPA (Automation Anywhere, Blue Prism, Python)</span><span>AI agents &amp; LLM apps</span><span>LLM cost optimisation</span><span>Web apps (Next.js, FastAPI)</span><span>Test automation / QA</span><span>Raspberry Pi, PiKVM &amp; Tailscale</span></div>
+</header>
+<main><article class="card" id="apa-incident-command-center">
+<img src="images/apa-incident-command-center.png" alt="AI Incident Command Center overview" loading="lazy">
+<div class="body"><span class="tag">Agentic Process Automation</span><h2>AI Incident Command Center</h2>
+<p><strong>Problem.</strong> Incident queues were triaged by hand: slow, inconsistent and hard to audit.</p>
+<p><strong>What we built.</strong> A 43-node APA process orchestrates 2 AI Agents, 3 AI Skills and 13 TaskBots. Agents classify and enrich incidents, TaskBots execute approved actions, and human-review forms gate anything high risk. Shared exception paths and correlated audit logs make every run traceable.</p>
+<ul><li>447 test executions passed</li><li>Human approval on high-risk actions</li><li>End-to-end audit trail per incident</li></ul><div class="chips"><span class="chip">Automation Anywhere A360</span><span class="chip">APA</span><span class="chip">AI Agents</span><span class="chip">AI Skills</span><span class="chip">TaskBots</span><span class="chip">Forms</span></div></div></article><article class="card" id="multi-agent-orchestrator">
+<img src="images/multi-agent-orchestrator.png" alt="Multi-Agent Orchestration Framework overview" loading="lazy">
+<div class="body"><span class="tag">AI Agents</span><h2>Multi-Agent Orchestration Framework</h2>
+<p><strong>Problem.</strong> Single-agent coding runs lose context, skip review and are hard to resume.</p>
+<p><strong>What we built.</strong> A central director assigns stages to specialist agents, keeps persistent shared context, asks for approval at gates, retries with limits and emits audit events to a monitoring dashboard. Runs can be paused and resumed.</p>
+<ul><li>Resumable multi-stage runs</li><li>Approval gates and bounded retries</li><li>Live dashboard of agent activity</li></ul><div class="chips"><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Claude</span><span class="chip">OpenAI Codex</span><span class="chip">Gemini</span><span class="chip">MCP</span></div></div></article><article class="card" id="context-compressor">
+<img src="images/context-compressor.png" alt="ContextCompressor overview" loading="lazy">
+<div class="body"><span class="tag">LLM Cost Optimisation</span><h2>ContextCompressor</h2>
+<p><strong>Problem.</strong> Long agent sessions and large tool schemas made every LLM call expensive and slow.</p>
+<p><strong>What we built.</strong> Compresses conversation history and tool definitions under a token budget, keeps sessions in Redis, and exposes provider adapters for OpenAI, Anthropic and Gemini behind one proxy.</p>
+<ul><li>Token budgets per request</li><li>Provider-agnostic adapters</li><li>Drop-in proxy for existing apps</li></ul><div class="chips"><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Redis</span><span class="chip">OpenAI</span><span class="chip">Anthropic</span><span class="chip">Gemini</span></div></div></article><article class="card" id="no-code-agent-builder">
+<img src="images/no-code-agent-builder.png" alt="No-code AI Agent Builder overview" loading="lazy">
+<div class="body"><span class="tag">AI Platform</span><h2>No-code AI Agent Builder</h2>
+<p><strong>Problem.</strong> Business teams needed to prototype agents without waiting on developers.</p>
+<p><strong>What we built.</strong> Drag-and-drop nodes (LLM, tool, condition, memory) on a canvas; the FastAPI backend executes the graph and streams results to the Next.js UI.</p>
+<ul><li>Visual agent and workflow design</li><li>Reusable node library</li><li>Chatbot preview in the browser</li></ul><div class="chips"><span class="chip">FastAPI</span><span class="chip">Python</span><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span></div></div></article><article class="card" id="gst-invoice-ewaybill-app">
+<img src="images/gst-invoice-ewaybill-app.png" alt="GST Invoice &amp; E-Way Bill App overview" loading="lazy">
+<div class="body"><span class="tag">Web App</span><h2>GST Invoice &amp; E-Way Bill App</h2>
+<p><strong>Problem.</strong> Invoices and E-Way Bills were typed twice, in different systems, with frequent GSTIN errors.</p>
+<p><strong>What we built.</strong> GSTIN lookup autofills party details, invoices compute tax automatically, E-Way Bills are created through the official API, and documents export to PDF.</p>
+<ul><li>One entry for invoice and E-Way Bill</li><li>GSTIN autofill</li><li>PDF export</li></ul><div class="chips"><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">REST APIs</span><span class="chip">PDF</span></div></div></article><article class="card" id="ewaybill-rpa-bot">
+<img src="images/ewaybill-rpa-bot.png" alt="E-Way Bill RPA Bot overview" loading="lazy">
+<div class="body"><span class="tag">RPA</span><h2>E-Way Bill RPA Bot</h2>
+<p><strong>Problem.</strong> Staff spent hours a day on repetitive portal data entry.</p>
+<p><strong>What we built.</strong> Reads a spreadsheet of shipments, logs in with an operator-entered session, fills each form, saves the PDF, and writes a status report with screenshots on failure.</p>
+<ul><li>Bulk generation and cancellation</li><li>PDF saved per bill</li><li>Failure screenshots and logs</li></ul><div class="chips"><span class="chip">Python</span><span class="chip">Playwright</span><span class="chip">Excel</span><span class="chip">PDF</span></div></div></article><article class="card" id="ai-ticket-triage">
+<img src="images/ai-ticket-triage.png" alt="AI IT Ticket Triage overview" loading="lazy">
+<div class="body"><span class="tag">Governed AI</span><h2>AI IT Ticket Triage</h2>
+<p><strong>Problem.</strong> Ticket routing was manual and mis-routed tickets bounced between teams.</p>
+<p><strong>What we built.</strong> An LLM returns validated JSON (category, priority, team, confidence). High-confidence tickets route automatically; low-confidence ones go to a human queue. Every decision is logged.</p>
+<ul><li>Validated JSON outputs</li><li>Confidence-based routing</li><li>Human fallback queue</li></ul><div class="chips"><span class="chip">Python</span><span class="chip">LLM</span><span class="chip">JSON Schema</span><span class="chip">Automation Anywhere</span></div></div></article><article class="card" id="vscode-coding-agent">
+<img src="images/vscode-coding-agent.png" alt="Coding Agent VS Code Extension overview" loading="lazy">
+<div class="body"><span class="tag">Developer Tools</span><h2>Coding Agent VS Code Extension</h2>
+<p><strong>Problem.</strong> Developers wanted AI help inside the editor without giving it unchecked control.</p>
+<p><strong>What we built.</strong> A webview chat calls an LLM with file, search and terminal tools; every edit or command is shown as a diff or preview and needs a click to approve.</p>
+<ul><li>Approval before edits and commands</li><li>Diff previews</li><li>Tool use inside VS Code</li></ul><div class="chips"><span class="chip">TypeScript</span><span class="chip">VS Code API</span><span class="chip">Webview</span><span class="chip">LLM tools</span></div></div></article><article class="card" id="sbom-guardrail-cli">
+<img src="images/sbom-guardrail-cli.png" alt="Supply Chain Guardrail CLI overview" loading="lazy">
+<div class="body"><span class="tag">Security Tooling</span><h2>Supply Chain Guardrail CLI</h2>
+<p><strong>Problem.</strong> Teams shipped dependencies without knowing their vulnerability status.</p>
+<p><strong>What we built.</strong> Scans a project, produces an SBOM, queries OSV for known vulnerabilities, and fails CI when policy rules (severity, licence, age) are broken.</p>
+<ul><li>SBOM generation</li><li>OSV vulnerability checks</li><li>CI-friendly exit codes</li></ul><div class="chips"><span class="chip">Go</span><span class="chip">SBOM</span><span class="chip">OSV</span><span class="chip">CI/CD</span></div></div></article><article class="card" id="pikvm-tailscale-remote-ops">
+<img src="images/pikvm-tailscale-remote-ops.png" alt="Raspberry Pi + PiKVM + Tailscale Remote Ops overview" loading="lazy">
+<div class="body"><span class="tag">Edge &amp; Remote Access</span><h2>Raspberry Pi + PiKVM + Tailscale Remote Ops</h2>
+<p><strong>Problem.</strong> Remote machines that hang or need BIOS access normally require someone on site, and port forwarding is risky.</p>
+<p><strong>What we built.</strong> PiKVM on a Raspberry Pi 4 (HDMI capture + USB keyboard/mouse emulation) acts as a KVM-over-IP rescue console. A second Pi runs apps headless with systemd services and SSD boot. Both join a Tailscale tailnet, so there is no open port on the router.</p>
+<ul><li>Reboot, BIOS and OS install remotely</li><li>Zero port forwarding (Tailscale)</li><li>Headless Pi services with auto-restart</li></ul><div class="chips"><span class="chip">Raspberry Pi 4</span><span class="chip">PiKVM</span><span class="chip">Tailscale</span><span class="chip">Linux</span><span class="chip">systemd</span></div></div></article><article class="card" id="trading-automation-platform">
+<img src="images/trading-automation-platform.png" alt="News-aware Trading Automation Platform overview" loading="lazy">
+<div class="body"><span class="tag">Python Automation</span><h2>News-aware Trading Automation Platform</h2>
+<p><strong>Problem.</strong> Automated strategies can trade on stale or unreliable data.</p>
+<p><strong>What we built.</strong> Pipelines ingest market data and news, score signals, and pass them through safety gates that halt trading when data is late or inconsistent. Runs headless on a Raspberry Pi with monitoring.</p>
+<ul><li>~2,500 automated tests</li><li>Data-quality safety gates</li><li>Headless deployment with monitoring</li></ul><div class="chips"><span class="chip">Python</span><span class="chip">Broker API</span><span class="chip">pytest</span><span class="chip">Raspberry Pi</span></div></div></article></main>
+<footer>Project write-ups and diagrams only; client and proprietary code is not published. Hire us on Freelancer: <a href="https://www.freelancer.com/u/rahulid6">freelancer.com/u/rahulid6</a></footer>
+</body></html>
